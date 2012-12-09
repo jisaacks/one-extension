@@ -23,7 +23,7 @@ module OneExtension
       # check if the .html extension is set
       has_extension = request.env["PATH_INFO"][-5..-1] == ".html"
       # get the one_extension_type
-      type = self.class.one_extension_type || :exclusion
+      type = self.class.one_extension_type
       if type == :exclusion && has_extension
         # strip the .html
         url = request.env["PATH_INFO"][0...-5]
