@@ -2,9 +2,9 @@
 
 A small gem to enforce exclusion (or inclusion) of *.html* in your rails app routes. 
 
-If SEO is of any importance to your application you probably don't want *path* and *path****.html*** returning the same content as Google will treat them as seperate pages.
+If SEO is of any importance to your application you probably don't want *path* and *path.html* returning the same content as Google will treat them as seperate pages.
 
-Installing this gem will enforce only one route, and redirect all requests to the other
+This gem will enforce only one route, and redirect all requests to the other
 
 ### Installation
 
@@ -13,7 +13,7 @@ Installing this gem will enforce only one route, and redirect all requests to th
 
 ### Usage
 
-Add a call to `one_extension` in the controller you want to use it on. For example, if you want all requests to your Books controller with *.html* to be redirected you would add this to your books controller:
+Add a call to `one_extension` in the controller you want to use it on. For example, if you want all requests to your Books controller with *.html* to be redirected to not have it, you would add this to your books controller:
 
 ```ruby
 class BooksController < ApplicationController
